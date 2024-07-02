@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Demo",
-  "versions": ["English", "Español"],
+  "versions": ["1.0", "2.0", "3.0"],
   "colors": {
     "primary": "#2759CD",
     "light": "#8DB0FB",
@@ -16,13 +16,18 @@
   "navigation": [
     {
       "group": "Getting Started",
-      "version": "English",
-      "pages": ["english/introduction"]
+      "version": "1.0",
+      "pages": ["1.0/introduction", "1.0/develop/write-flows"]
     },
     {
-      "group": "Empezando",
-      "version": "Español",
-      "pages": ["espanol/introduccion"]
+      "group": "Getting Started",
+      "version": "2.0",
+      "pages": ["2.0/introduction", "2.0/develop/write-flows"]
+    },
+    {
+      "group": "Getting Started",
+      "version": "3.0",
+      "pages": ["3.0/introduction"]
     }
   ]
 }
