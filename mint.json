@@ -1,28 +1,1480 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Demo",
-  "versions": ["English", "Español"],
+  "name": "Pinecone Docs",
+  "logo": "/logo/light.svg",
+  "favicon": "/favicon-512.png",
   "colors": {
-    "primary": "#2759CD",
-    "light": "#8DB0FB",
-    "dark": "#113997",
+    "primary": "#1C17FF",
+    "light": "#504CFF",
+    "dark": "#1C17FF",
     "background": {
-      "light": "#F9F9F9",
-      "dark": "#0c101f"
+      "light": "#FBFBFC"
     }
   },
-
-  "favicon": "/favicon.png",
-  "navigation": [
+  "modeToggle": {
+    "default": "light",
+    "isHidden": true
+  },
+  "topbarCtaButton": {
+    "name": "Sign up free",
+    "url": "https://app.pinecone.io/?sessionType=signup"
+  },
+  "topbarLinks": [
     {
-      "group": "Getting Started",
-      "version": "English",
-      "pages": ["english/introduction"]
+      "name": "Status",
+      "url": "https://status.pinecone.io"
     },
     {
-      "group": "Empezando",
-      "version": "Español",
-      "pages": ["espanol/introduccion"]
+      "name": "Support",
+      "url": "https://support.pinecone.io"
+    },
+    {
+      "name": "Log In",
+      "url": "https://app.pinecone.io/?sessionType=login"
+    }
+  ],
+  "primaryTab": {
+    "name": "Home"
+  },
+  "versions": ["2024-07 latest", "2024-04"],
+  "tabs": [
+    {
+      "name": "Guides",
+      "url": "guides"
+    },
+    {
+      "name": "Reference",
+      "url": "reference"
+    },
+    {
+      "name": "Examples",
+      "url": "examples"
+    },
+    {
+      "name": "Models",
+      "url": "models"
+    },
+    {
+      "name": "Integrations",
+      "url": "integrations"
+    },
+    {
+      "name": "Troubleshooting",
+      "url": "troubleshooting"
+    },
+    {
+      "name": "Releases",
+      "url": "release-notes"
+    }
+  ],
+  "seo": {
+    "indexHiddenPages": true
+  },
+  "navigation": [
+    {
+      "group": "Home",
+      "pages": ["home"]
+    },
+    {
+      "group": "Get started",
+      "pages": [
+        "guides/get-started/quickstart",
+        "guides/get-started/key-concepts",
+        "guides/get-started/build-a-rag-chatbot",
+        "guides/get-started/authentication",
+        "guides/get-started/examples"
+      ]
+    },
+    {
+      "group": "Organizations",
+      "pages": [
+        "guides/organizations/understanding-organizations",
+        {
+          "group": "Manage billing",
+          "pages": [
+            "guides/organizations/manage-billing/changing-your-billing-plan",
+            "guides/organizations/manage-billing/setting-up-billing-through-aws-marketplace",
+            "guides/organizations/manage-billing/setting-up-billing-through-azure-marketplace",
+            "guides/organizations/manage-billing/setting-up-billing-through-gcp-marketplace",
+            "guides/organizations/manage-billing/understanding-subscription-status"
+          ]
+        },
+        {
+          "group": "Manage cost",
+          "pages": [
+            "guides/organizations/manage-cost/understanding-cost",
+            "guides/organizations/manage-cost/monitor-your-usage",
+            "guides/organizations/manage-cost/manage-cost"
+          ]
+        },
+        {
+          "group": "Configure single sign-on",
+          "pages": ["guides/organizations/configure-single-sign-on/okta"]
+        },
+        "guides/organizations/manage-organization-members"
+      ]
+    },
+    {
+      "group": "Projects",
+      "pages": [
+        "guides/projects/understanding-projects",
+        "guides/projects/create-a-project",
+        "guides/projects/manage-project-members",
+        "guides/projects/rename-a-project",
+        "guides/projects/set-a-project-pod-limit"
+      ]
+    },
+    {
+      "group": "Indexes",
+      "pages": [
+        "guides/indexes/understanding-indexes",
+        "guides/indexes/create-an-index",
+        "guides/indexes/migrate-a-pod-based-index-to-serverless",
+        "guides/indexes/view-index-information",
+        "guides/indexes/back-up-an-index",
+        "guides/indexes/delete-an-index",
+        "guides/indexes/use-namespaces",
+        "guides/indexes/implement-multitenancy",
+        "guides/indexes/choose-a-pod-type-and-size",
+        "guides/indexes/configure-pod-based-indexes",
+        "guides/indexes/scale-pod-based-indexes",
+        "guides/indexes/understanding-collections"
+      ]
+    },
+    {
+      "group": "Data",
+      "pages": [
+        "guides/data/upsert-data",
+        "guides/data/query-data",
+        "guides/data/fetch-data",
+        "guides/data/update-data",
+        "guides/data/delete-data",
+        "guides/data/list-record-ids",
+        "guides/data/get-an-index-endpoint",
+        "guides/data/filter-with-metadata",
+        "guides/data/manage-rag-documents",
+        {
+          "group": "Hybrid search and sparse vectors",
+          "pages": [
+            "guides/data/understanding-hybrid-search",
+            "guides/data/encode-sparse-vectors",
+            "guides/data/upsert-sparse-dense-vectors",
+            "guides/data/query-sparse-dense-vectors"
+          ]
+        },
+        {
+          "group": "Use datasets",
+          "pages": [
+            "guides/data/use-sample-datasets",
+            "guides/data/use-public-pinecone-datasets",
+            "guides/data/create-and-load-private-datasets"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Inference",
+      "pages": [
+        "guides/inference/understanding-inference",
+        "guides/inference/generate-embeddings"
+      ]
+    },
+    {
+      "group": "Assistant",
+      "pages": [
+        "guides/assistant/understanding-assistant",
+        "guides/assistant/create-assistant",
+        "guides/assistant/list-assistants",
+        "guides/assistant/check-assistant-status",
+        "guides/assistant/upload-file",
+        "guides/assistant/list-files",
+        "guides/assistant/check-file-status",
+        "guides/assistant/delete-file",
+        "guides/assistant/chat-with-assistant",
+        "guides/assistant/delete-assistant"
+      ]
+    },
+    {
+      "group": "Operations",
+      "pages": [
+        "guides/operations/migrate-to-the-new-api",
+        "guides/operations/move-to-production",
+        "guides/operations/performance-tuning",
+        "guides/operations/enable-aws-privatelink",
+        "guides/operations/monitoring"
+      ]
+    },
+    {
+      "group": "REST APIs",
+      "pages": [
+        "reference/api/introduction",
+        "reference/api/versioning",
+        {
+          "group": "Database API",
+          "version": "2024-07 latest",
+          "pages": [
+            {
+              "group": "Data plane",
+              "pages": [
+                "reference/api/2024-07/data-plane/upsert",
+                "reference/api/2024-07/data-plane/query",
+                "reference/api/2024-07/data-plane/fetch",
+                "reference/api/2024-07/data-plane/update",
+                "reference/api/2024-07/data-plane/delete",
+                "reference/api/2024-07/data-plane/list",
+                "reference/api/2024-07/data-plane/describeindexstats"
+              ]
+            },
+            {
+              "group": "Control plane",
+              "pages": [
+                "reference/api/2024-07/control-plane/list_indexes",
+                "reference/api/2024-07/control-plane/create_index",
+                "reference/api/2024-07/control-plane/describe_index",
+                "reference/api/2024-07/control-plane/delete_index",
+                "reference/api/2024-07/control-plane/configure_index",
+                "reference/api/2024-07/control-plane/list_collections",
+                "reference/api/2024-07/control-plane/create_collection",
+                "reference/api/2024-07/control-plane/describe_collection",
+                "reference/api/2024-07/control-plane/delete_collection"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Database API",
+          "version": "2024-04",
+          "pages": [
+            {
+              "group": "Data plane",
+              "pages": [
+                "reference/api/2024-04/data-plane/upsert",
+                "reference/api/2024-04/data-plane/query",
+                "reference/api/2024-04/data-plane/fetch",
+                "reference/api/2024-04/data-plane/update",
+                "reference/api/2024-04/data-plane/delete",
+                "reference/api/2024-04/data-plane/list",
+                "reference/api/2024-04/data-plane/describeindexstats"
+              ]
+            },
+            {
+              "group": "Control plane",
+              "pages": [
+                "reference/api/2024-04/control-plane/list_indexes",
+                "reference/api/2024-04/control-plane/create_index",
+                "reference/api/2024-04/control-plane/describe_index",
+                "reference/api/2024-04/control-plane/delete_index",
+                "reference/api/2024-04/control-plane/configure_index",
+                "reference/api/2024-04/control-plane/list_collections",
+                "reference/api/2024-04/control-plane/create_collection",
+                "reference/api/2024-04/control-plane/describe_collection",
+                "reference/api/2024-04/control-plane/delete_collection"
+              ]
+            }
+          ]
+        },
+        {
+          "group": "Inference API",
+          "version": "2024-07 latest",
+          "pages": ["reference/api/2024-07/inference/generate-embeddings"]
+        },
+        {
+          "group": "Inference API",
+          "version": "2024-04",
+          "pages": ["reference/api/2024-04/inference/generate-embeddings"]
+        },
+        {
+          "group": "Assistant API",
+          "version": "2024-07 latest",
+          "pages": [
+            "reference/api/2024-07/assistant/list-assistants",
+            "reference/api/2024-07/assistant/create-assistant",
+            "reference/api/2024-07/assistant/describe-assistant",
+            "reference/api/2024-07/assistant/delete-assistant",
+            "reference/api/2024-07/assistant/list-files",
+            "reference/api/2024-07/assistant/create-file",
+            "reference/api/2024-07/assistant/describe-file",
+            "reference/api/2024-07/assistant/delete-file",
+            "reference/api/2024-07/assistant/chat-completion-assistant"
+          ]
+        },
+        {
+          "group": "Assistant API",
+          "version": "2024-04",
+          "pages": [
+            "reference/api/2024-04/assistant/list-assistants",
+            "reference/api/2024-04/assistant/create-assistant",
+            "reference/api/2024-04/assistant/describe-assistant",
+            "reference/api/2024-04/assistant/delete-assistant",
+            "reference/api/2024-04/assistant/list-files",
+            "reference/api/2024-04/assistant/create-file",
+            "reference/api/2024-04/assistant/describe-file",
+            "reference/api/2024-04/assistant/delete-file",
+            "reference/api/2024-04/assistant/chat-completion-assistant"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Clients",
+      "pages": [
+        "reference/pinecone-clients",
+        "reference/python-client",
+        "reference/node-client",
+        "reference/java-client",
+        "reference/go-client"
+      ]
+    },
+    {
+      "group": "Tools",
+      "pages": [
+        "reference/tools/pinecone-datasets",
+        "reference/tools/pinecone-text-client",
+        "reference/tools/pinecone-spark-connector"
+      ]
+    },
+    {
+      "group": "Architecture",
+      "pages": [
+        "reference/architecture/serverless-architecture",
+        "reference/architecture/pod-based-architecture"
+      ]
+    },
+    {
+      "group": "Miscellaneous",
+      "pages": [
+        "reference/quotas-and-limits",
+        "reference/known-limitations",
+        "reference/security"
+      ]
+    },
+    {
+      "group": "Examples",
+      "pages": [
+        "examples/notebooks",
+        "examples/sample-apps",
+        "examples/reference-architectures"
+      ]
+    },
+    {
+      "group": "Models",
+      "pages": ["models/overview"]
+    },
+    {
+      "group": "",
+      "pages": ["integrations/overview"]
+    },
+    {
+      "group": "Connect an integration",
+      "pages": [
+        {
+          "group": "Data sources",
+          "pages": [
+            "integrations/airbyte",
+            "integrations/apify",
+            "integrations/confluent",
+            "integrations/databricks",
+            "integrations/elasticsearch",
+            "integrations/estuary",
+            "integrations/fleak",
+            "integrations/flowise",
+            "integrations/gathr",
+            "integrations/snowflake",
+            "integrations/streamnative",
+            "integrations/unstructured"
+          ]
+        },
+        {
+          "group": "Frameworks",
+          "pages": [
+            "integrations/amazon-bedrock",
+            "integrations/amazon-sagemaker",
+            "integrations/context-data",
+            "integrations/haystack",
+            "integrations/instill",
+            "integrations/langchain",
+            "integrations/llamaindex",
+            "integrations/octoai"
+          ]
+        },
+        {
+          "group": "Infrastructure",
+          "pages": [
+            "integrations/aws",
+            "integrations/azure",
+            "integrations/gcp",
+            "integrations/github-copilot",
+            "integrations/pulumi",
+            "integrations/terraform",
+            "integrations/vercel"
+          ]
+        },
+        {
+          "group": "Models",
+          "pages": [
+            "integrations/anyscale",
+            "integrations/cohere",
+            "integrations/jina",
+            "integrations/voyage",
+            "integrations/hugging-face-inference-endpoints",
+            "integrations/openai"
+          ]
+        },
+        {
+          "group": "Observability",
+          "pages": [
+            "integrations/datadog",
+            "integrations/langtrace",
+            "integrations/new-relic",
+            "integrations/traceloop",
+            "integrations/trulens"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Build an integration",
+      "pages": [
+        "integrations/build-integration/become-a-partner",
+        "integrations/build-integration/attribute-usage-to-your-integration",
+        "integrations/build-integration/connect-your-users-to-pinecone"
+      ]
+    },
+    {
+      "group": "",
+      "pages": [
+        "troubleshooting/contact-support",
+        "troubleshooting/how-to-work-with-support",
+        "troubleshooting/pinecone-support-slas"
+      ]
+    },
+    {
+      "group": "Account management",
+      "pages": [
+        "troubleshooting/login-code-issues",
+        "troubleshooting/custom-data-processing-agreements",
+        "troubleshooting/delete-your-account",
+        "troubleshooting/billing-disputes-and-refunds"
+      ]
+    },
+    {
+      "group": "Indexes",
+      "pages": [
+        "troubleshooting/available-cloud-regions",
+        "troubleshooting/export-indexes",
+        "troubleshooting/wait-for-index-creation",
+        "troubleshooting/select-index-type-and-size",
+        "troubleshooting/how-and-when-to-increase-index-size",
+        "troubleshooting/use-namespaces-instead-of-several-indexes",
+        "troubleshooting/namespaces-vs-metadata-filtering",
+        "troubleshooting/restrictions-on-index-names",
+        "troubleshooting/return-all-vectors-in-an-index",
+        "troubleshooting/vertically-downscaling",
+        "troubleshooting/delete-a-namespace",
+        "troubleshooting/pods-are-full"
+      ]
+    },
+    {
+      "group": "Data",
+      "pages": [
+        "troubleshooting/parallel-queries",
+        "troubleshooting/minimize-latencies",
+        "troubleshooting/embedding-values-changed-when-upserted",
+        "troubleshooting/how-and-when-to-add-replicas",
+        "troubleshooting/keep-customer-data-separate",
+        "troubleshooting/limitations-of-querying-by-id",
+        "troubleshooting/create-and-manage-vectors-with-metadata",
+        "troubleshooting/handle-deletes-by-metadata",
+        "troubleshooting/metadata-reconfiguration",
+        "troubleshooting/metadata-string-value-returned-as-datetime",
+        "troubleshooting/remove-metadata-field"
+      ]
+    },
+    {
+      "group": "Common errors",
+      "pages": [
+        "troubleshooting/index-creation-error-missing-spec",
+        "troubleshooting/index-creation-error-max-serverless",
+        "troubleshooting/serverless-index-connection-errors",
+        "troubleshooting/error-handshake-read-failed",
+        "troubleshooting/pinecone-attribute-errors-with-langchain",
+        "troubleshooting/error-cannot-import-name-pinecone",
+        "troubleshooting/module-pinecone-has-no-attribute-init"
+      ]
+    },
+    {
+      "group": "Miscellaneous",
+      "pages": [
+        "troubleshooting/best-practices",
+        "troubleshooting/differences-between-lexical-semantic-search",
+        "troubleshooting/nodejs-troubleshooting",
+        "troubleshooting/cors-issues",
+        "troubleshooting/debug-model-vs-pinecone-recall-issues",
+        "troubleshooting/non-indexed-field-filter-issues",
+        "troubleshooting/unable-to-pip-install"
+      ]
+    },
+    {
+      "group": "Release notes",
+      "pages": [
+        "release-notes/2024",
+        "release-notes/2023",
+        "release-notes/2022"
+      ]
+    },
+    {
+      "group": "Policies",
+      "pages": ["release-notes/api-lifecycle-policy"]
+    }
+  ],
+  "feedback": {
+    "thumbsRating": true
+  },
+  "footerSocials": {
+    "twitter": "https://twitter.com/pinecone?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+    "linkedin": "https://www.linkedin.com/company/pinecone-io/"
+  },
+  "metadata": {
+    "og:image": "https://www.pinecone.io/images/docs_og_image.png",
+    "twitter:title": "The vector database to build knowledgeable AI | Pinecone",
+    "twitter:description": "Search through billions of items for similar matches to any object, in milliseconds. It's the next generation of search, an API call away.",
+    "twitter:site": "@pinecone",
+    "twitter:image": "https://www.pinecone.io/images/docs_og_image.png"
+  },
+  "openapi": [
+    "openapi/control_2024-07.yaml",
+    "openapi/data_2024-04.json",
+    "legacy/openapi/pinecone.json",
+    "openapi/control_plane_api.json",
+    "openapi/data_plane_api.json",
+    "legacy/openapi/pinecone.json",
+    "openapi/assistant_api.json"
+  ],
+  "api": {
+    "playground": {
+      "mode": "simple"
+    }
+  },
+  "analytics": {
+    "heap": {
+      "appId": "3879495182"
+    },
+    "koala": {
+      "publicApiKey": "pk_dedf7f497457f685cec291ae4d5002e828c1"
+    },
+    "gtm": {
+      "tagId": "GTM-5RCSPVG"
+    }
+  },
+  "isWhiteLabeled": true,
+  "redirects": [
+    {
+      "source": "/legacy/reference/*",
+      "destination": "/reference/*"
+    },
+    {
+      "source": "/tools/reference-architectures",
+      "destination": "/examples/reference-architectures"
+    },
+    {
+      "source": "/tools/pinecone-utilities",
+      "destination": "/reference/tools/pinecone-datasets"
+    },
+    {
+      "source": "/guides/inference/understanding-inference-api",
+      "destination": "/guides/inference/understanding-inference"
+    },
+    {
+      "source": "/guides/indexes/migrate-a-legacy-starter-index-to-serverless",
+      "destination": "/guides/indexes/migrate-a-pod-based-index-to-serverless"
+    },
+    {
+      "source": "/docs/filter-with-metadata",
+      "destination": "/guides/data/filter-with-metadata"
+    },
+    {
+      "source": "/reference/community-libraries",
+      "destination": "/reference/pinecone-clients#community-clients"
+    },
+    {
+      "source": "/integrations/build-integration/register-your-integration",
+      "destination": "/integrations/build-integration/attribute-usage-to-your-integration"
+    },
+    {
+      "source": "/integrations/build-integration/connect-to-pinecone-with-embedded-widget",
+      "destination": "/integrations/build-integration/connect-your-users-to-pinecone"
+    },
+    {
+      "source": "/guides/get-started/examples",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/reference/quotas-and-rate-limits",
+      "destination": "/reference/quotas-and-limits"
+    },
+    {
+      "source": "/troubleshooting/waiting-for-index-creation",
+      "destination": "/troubleshooting/wait-for-index-creation"
+    },
+    {
+      "source": "/troubleshooting/using-namespaces-vs-metadata-filtering",
+      "destination": "/troubleshooting/namespaces-vs-metadata-filtering"
+    },
+    {
+      "source": "/troubleshooting/using-namespaces-instead-of-several-indexes",
+      "destination": "/troubleshooting/use-namespaces-instead-of-several-indexes"
+    },
+    {
+      "source": "/troubleshooting/support-slas",
+      "destination": "/troubleshooting/pinecone-support-slas"
+    },
+    {
+      "source": "/troubleshooting/selecting-index-type-and-size",
+      "destination": "/troubleshooting/select-index-type-and-size.mdx"
+    },
+    {
+      "source": "/troubleshooting/returning-all-vectors-in-an-index",
+      "destination": "/troubleshooting/return-all-vectors-in-an-index"
+    },
+    {
+      "source": "/troubleshooting/removing-metadata-field",
+      "destination": "/troubleshooting/remove-metadata-field"
+    },
+    {
+      "source": "/troubleshooting/querying-by-id",
+      "destination": "/troubleshooting/limitations-of-querying-by-id"
+    },
+    {
+      "source": "/troubleshooting/keeping-customer-data-separate",
+      "destination": "/troubleshooting/keep-customer-data-separate"
+    },
+    {
+      "source": "/troubleshooting/index-creation-error-spec",
+      "destination": "/troubleshooting/index-creation-error-missing-spec"
+    },
+    {
+      "source": "/troubleshooting/increasing-index-size",
+      "destination": "/troubleshooting/how-and-when-to-increase-index-size"
+    },
+    {
+      "source": "/troubleshooting/how-to-delete-account",
+      "destination": "/troubleshooting/delete-your-account"
+    },
+    {
+      "source": "/troubleshooting/how-to-contact-support",
+      "destination": "/troubleshooting/contact-support"
+    },
+    {
+      "source": "/troubleshooting/handling-deletes-by-metadata",
+      "destination": "/troubleshooting/handle-deletes-by-metadata"
+    },
+    {
+      "source": "/troubleshooting/exporting-indexes",
+      "destination": "/troubleshooting/export-indexes"
+    },
+    {
+      "source": "/troubleshooting/cannot-import-name-pinecone",
+      "destination": "/troubleshooting/error-cannot-import-name-pinecone"
+    },
+    {
+      "source": "/troubleshooting/deleting-a-namespace",
+      "destination": "/troubleshooting/delete-a-namespace"
+    },
+    {
+      "source": "/troubleshooting/debugging-recall-issues",
+      "destination": "/troubleshooting/debug-model-vs-pinecone-recall-issues"
+    },
+    {
+      "source": "/troubleshooting/adding-replicas",
+      "destination": "/troubleshooting/how-and-when-to-add-replicas"
+    },
+    {
+      "source": "/troubleshooting/creating-and-managing-vectors-with-metadata",
+      "destination": "/troubleshooting/create-and-manage-vectors-with-metadata"
+    },
+    {
+      "source": "/guides/organizations/manage-cost/managing-cost",
+      "destination": "/guides/organizations/manage-cost/manage-cost"
+    },
+    {
+      "source": "/guides/organizations/manage-cost/monitoring-your-usage",
+      "destination": "/guides/organizations/manage-cost/monitor-your-usage"
+    },
+    {
+      "source": "/guides/data/using-public-pinecone-datasets",
+      "destination": "/guides/data/use-public-pinecone-datasets"
+    },
+    {
+      "source": "/guides/data/creating-and-loading-private-datasets",
+      "destination": "/guides/data/create-and-load-private-datasets"
+    },
+    {
+      "source": "/guides/operations/moving-to-production",
+      "destination": "/guides/operations/move-to-production"
+    },
+    {
+      "source": "/guides/data/filtering-with-metadata",
+      "destination": "/guides/data/filter-with-metadata"
+    },
+    {
+      "source": "/guides/indexes/choosing-a-pod-type-and-size",
+      "destination": "/guides/indexes/choose-a-pod-type-and-size"
+    },
+    {
+      "source": "/guides/indexes/using-namespaces",
+      "destination": "/guides/indexes/use-namespaces"
+    },
+    {
+      "source": "/guides/getting-started/overview",
+      "destination": "/guides/get-started/quickstart"
+    },
+    {
+      "source": "/guides/indexes/convert-a-starter-index-to-serverless",
+      "destination": "/guides/indexes/convert-a-gcp-starter-index-to-serverless"
+    },
+    {
+      "source": "/legacy/data/*",
+      "destination": "/guides/data/*"
+    },
+    {
+      "source": "/guides/getting-started/quickstart",
+      "destination": "/guides/get-started/quickstart"
+    },
+    {
+      "source": "/guides/getting-started/authentication",
+      "destination": "/guides/get-started/authentication"
+    },
+    {
+      "source": "/legacy/getting-started/quickstart",
+      "destination": "/guides/get-started/quickstart"
+    },
+    {
+      "source": "/legacy/getting-started/authentication",
+      "destination": "/guides/get-started/authentication"
+    },
+    {
+      "source": "/legacy/indexes/*",
+      "destination": "/guides/indexes/*"
+    },
+    {
+      "source": "/legacy/integrations/*",
+      "destination": "/integrations/*"
+    },
+    {
+      "source": "/legacy/libraries/*",
+      "destination": "/tools/*"
+    },
+    {
+      "source": "/legacy/operations/*",
+      "destination": "/guides/operations/*"
+    },
+    {
+      "source": "/legacy/organizations/*",
+      "destination": "/guides/organizations/*"
+    },
+    {
+      "source": "/legacy/projects/*",
+      "destination": "/guides/projects/*"
+    },
+    {
+      "source": "/legacy/architecture",
+      "destination": "/reference/architecture/pod-based-architecture"
+    },
+    {
+      "source": "/legacy/limits",
+      "destination": "/reference/quotas-and-limits"
+    },
+    {
+      "source": "/legacy/security",
+      "destination": "/reference/security"
+    },
+    {
+      "source": "/integrations/build-integration/attribute-api-activity",
+      "destination": "/integrations/build-integration/register-your-integration"
+    },
+    {
+      "source": "/troubleshooting/downgrade-your-organization",
+      "destination": "/guides/organization/manage-billing/change-your-billing-plan"
+    },
+    {
+      "source": "/troubleshooting/pinecone-has-no-attribute-from-texts",
+      "destination": "/troubleshooting/pinecone-attribute-errors-with-langchain"
+    },
+    {
+      "source": "/reference/limits",
+      "destination": "/reference/quotas-and-limits"
+    },
+    {
+      "source": "/guides/operations/troubleshooting",
+      "destination": "/troubleshooting/"
+    },
+    {
+      "source": "/guides/projects/add-members-to-projects-and-organizations",
+      "destination": "/guides/projects/manage-project-members"
+    },
+    {
+      "source": "https://docs.pinecone.io/",
+      "destination": "https://docs.pinecone.io/home"
+    },
+    {
+      "source": "/guides/organizations/configure-single-sign-on/overview",
+      "destination": "/guides/organizations/configure-single-sign-on/okta"
+    },
+    {
+      "source": "/docs/quickstart",
+      "destination": "/guides/get-started/quickstart"
+    },
+    {
+      "source": "/docs/overview",
+      "destination": "/guides/get-started/quickstart"
+    },
+    {
+      "source": "/docs/authentication",
+      "destination": "/guides/get-started/authentication"
+    },
+    {
+      "source": "/docs/new-api",
+      "destination": "/guides/operations/migrate-to-the-new-api"
+    },
+    {
+      "source": "/docs/organizations",
+      "destination": "/guides/organizations/understanding-organizations"
+    },
+    {
+      "source": "/docs/manage-billing",
+      "destination": "/guides/organizations/manage-billing/setting-up-billing-through-aws-marketplace"
+    },
+    {
+      "source": "/docs/setting-up-aws-marketplace-billing",
+      "destination": "/guides/organizations/manage-billing/setting-up-billing-through-aws-marketplace"
+    },
+    {
+      "source": "/docs/setting-up-azure-marketplace-billing",
+      "destination": "/guides/organizations/manage-billing/setting-up-billing-through-azure-marketplace"
+    },
+    {
+      "source": "/docs/setting-up-gcp-marketplace-billing",
+      "destination": "/guides/organizations/manage-billing/setting-up-billing-through-gcp-marketplace"
+    },
+    {
+      "source": "/docs/changing-your-billing-plan",
+      "destination": "/guides/organizations/manage-billing/changing-your-billing-plan"
+    },
+    {
+      "source": "/docs/subscription-status",
+      "destination": "/guides/organizations/manage-billing/understanding-subscription-status"
+    },
+    {
+      "source": "/docs/manage-cost",
+      "destination": "/guides/organizations/manage-cost/understanding-cost"
+    },
+    {
+      "source": "/docs/understanding-cost",
+      "destination": "/guides/organizations/manage-cost/understanding-cost"
+    },
+    {
+      "source": "/docs/monitoring-usage",
+      "destination": "/guides/organizations/manage-cost/monitor-your-usage"
+    },
+    {
+      "source": "/docs/managing-cost",
+      "destination": "/guides/organizations/manage-cost/manage-cost"
+    },
+    {
+      "source": "/docs/configure-single-sign-on",
+      "destination": "/guides/organizations/configure-single-sign-on/okta"
+    },
+    {
+      "source": "/docs/projects",
+      "destination": "/guides/projects/understanding-projects"
+    },
+    {
+      "source": "/docs/create-project",
+      "destination": "/guides/projects/create-a-project"
+    },
+    {
+      "source": "/docs/add-users-to-projects-and-organizations",
+      "destination": "/guides/projects/add-members-to-projects-and-organizations"
+    },
+    {
+      "source": "/docs/rename-project",
+      "destination": "/guides/projects/rename-a-project"
+    },
+    {
+      "source": "/docs/change-project-pod-limit",
+      "destination": "/guides/projects/set-a-project-pod-limit"
+    },
+    {
+      "source": "/docs/indexes",
+      "destination": "/guides/indexes/understanding-indexes"
+    },
+    {
+      "source": "/docs/create-an-index",
+      "destination": "/guides/indexes/create-an-index"
+    },
+    {
+      "source": "/docs/view-index-information",
+      "destination": "/guides/indexes/view-index-information"
+    },
+    {
+      "source": "/docs/back-up-an-index",
+      "destination": "/guides/indexes/back-up-an-index"
+    },
+    {
+      "source": "/docs/delete-an-index",
+      "destination": "/guides/indexes/delete-an-index"
+    },
+    {
+      "source": "/docs/namespaces",
+      "destination": "/guides/indexes/use-namespaces"
+    },
+    {
+      "source": "/docs/choosing-index-type-and-size",
+      "destination": "/guides/indexes/choose-a-pod-type-and-size"
+    },
+    {
+      "source": "/docs/configure-pod-based-indexes",
+      "destination": "/guides/indexes/configure-pod-based-indexes"
+    },
+    {
+      "source": "/docs/scaling-indexes",
+      "destination": "/guides/indexes/scale-pod-based-indexes"
+    },
+    {
+      "source": "/docs/collections",
+      "destination": "/guides/indexes/understanding-collections"
+    },
+    {
+      "source": "/docs/convert-starter-to-serverless",
+      "destination": "/guides/indexes/convert-a-starter-index-to-serverless"
+    },
+    {
+      "source": "/docs/upsert-data",
+      "destination": "/guides/data/upsert-data"
+    },
+    {
+      "source": "/docs/query-data",
+      "destination": "/guides/data/query-data"
+    },
+    {
+      "source": "/docs/fetch-data",
+      "destination": "/guides/data/fetch-data"
+    },
+    {
+      "source": "/docs/update-data",
+      "destination": "/guides/data/update-data"
+    },
+    {
+      "source": "/docs/delete-data",
+      "destination": "/guides/data/delete-data"
+    },
+    {
+      "source": "/docs/get-record-ids",
+      "destination": "/guides/data/list-record-ids"
+    },
+    {
+      "source": "/docs/get-index-endpoint",
+      "destination": "/guides/data/get-an-index-endpoint"
+    },
+    {
+      "source": "/docs/metadata-filtering",
+      "destination": "/guides/data/filter-with-metadata"
+    },
+    {
+      "source": "/docs/manage-rag-documents",
+      "destination": "/guides/data/manage-rag-documents"
+    },
+    {
+      "source": "/docs/hybrid-search-and-sparse-vectors",
+      "destination": "/guides/data/understanding-hybrid-search"
+    },
+    {
+      "source": "/docs/hybrid-search",
+      "destination": "/guides/data/understanding-hybrid-search"
+    },
+    {
+      "source": "/docs/encode-sparse-vectors",
+      "destination": "/guides/data/encode-sparse-vectors"
+    },
+    {
+      "source": "/docs/upsert-sparse-dense-vectors",
+      "destination": "/guides/data/upsert-sparse-dense-vectors"
+    },
+    {
+      "source": "/docs/query-sparse-dense-vectors",
+      "destination": "/guides/data/query-sparse-dense-vectors"
+    },
+    {
+      "source": "/docs/datasets",
+      "destination": "/guides/data/use-public-pinecone-datasets"
+    },
+    {
+      "source": "/docs/using-public-datasets",
+      "destination": "/guides/data/use-public-pinecone-datasets"
+    },
+    {
+      "source": "/docs/creating-datasets",
+      "destination": "/guides/data/create-and-load-private-datasets"
+    },
+    {
+      "source": "/docs/moving-to-production",
+      "destination": "/guides/operations/move-to-production"
+    },
+    {
+      "source": "/docs/performance-tuning",
+      "destination": "/guides/operations/performance-tuning"
+    },
+    {
+      "source": "/docs/monitoring",
+      "destination": "/guides/operations/monitoring"
+    },
+    {
+      "source": "/docs/troubleshooting",
+      "destination": "/guides/operations/troubleshooting"
+    },
+    {
+      "source": "/docs/multitenancy",
+      "destination": "/guides/operations/understanding-multitenancy"
+    },
+    {
+      "source": "/docs/common-errors",
+      "destination": "/troubleshooting"
+    },
+    {
+      "source": "guides/operations/common-errors",
+      "destination": "/troubleshooting"
+    },
+    {
+      "source": "/docs/amazon-bedrock",
+      "destination": "/integrations/amazon-bedrock"
+    },
+    {
+      "source": "/guides/integrations/setting-up-amazon-bedrock",
+      "destination": "/integrations/amazon-bedrock"
+    },
+    {
+      "source": "/docs/sagemaker",
+      "destination": "/integrations/sagemaker"
+    },
+    {
+      "source": "/docs/cohere",
+      "destination": "/integrations/cohere"
+    },
+    {
+      "source": "/guides/integrations/setting-up-cohere",
+      "destination": "/integrations/cohere"
+    },
+    {
+      "source": "/docs/databricks",
+      "destination": "/integrations/databricks"
+    },
+    {
+      "source": "/guides/integrations/setting-up-databricks",
+      "destination": "/integrations/databricks"
+    },
+    {
+      "source": "/docs/datadog",
+      "destination": "/integrations/datadog"
+    },
+    {
+      "source": "/guides/integrations/setting-up-datadog",
+      "destination": "/integrations/datadog"
+    },
+    {
+      "source": "/docs/elastic",
+      "destination": "/integrations/elastic"
+    },
+    {
+      "source": "/docs/haystack",
+      "destination": "/integrations/haystack"
+    },
+    {
+      "source": "/guides/integrations/setting-up-haystack",
+      "destination": "integrations/haystack"
+    },
+    {
+      "source": "/docs/hugging-face-endpoints",
+      "destination": "/integrations/hugging-face-inference-endpoints"
+    },
+    {
+      "source": "/guides/integrations/setting-up-hugging-face-endpoints",
+      "destination": "/integrations/hugging-face-inference-endpoints"
+    },
+    {
+      "source": "/guides/integrations/setting-up-langchain",
+      "destination": "/guides/integrations/langchain"
+    },
+    {
+      "source": "/docs/llamaindex",
+      "destination": "/integrations/llamaindex"
+    },
+    {
+      "source": "/guides/integrations/setting-up-llamaindex",
+      "destination": "/integratations/llamaindex"
+    },
+    {
+      "source": "/docs/openai",
+      "destination": "/integratations/openai"
+    },
+    {
+      "source": "/guides/integrations/setting-up-openai",
+      "destination": "/integratations/openai"
+    },
+    {
+      "source": "/docs/trulens",
+      "destination": "/integratations/trulens"
+    },
+    {
+      "source": "/guides/integrations/setting-up-trulens",
+      "destination": "/integratations/trulens"
+    },
+    {
+      "source": "/docs/release-notes",
+      "destination": "release-notes/2024"
+    },
+    {
+      "source": "/docs/python-client",
+      "destination": "/reference/python-client"
+    },
+    {
+      "source": "/docs/node-client",
+      "destination": "/reference/node-client"
+    },
+    {
+      "source": "/docs/architecture",
+      "destination": "/reference/architecture/serverless-architecture"
+    },
+    {
+      "source": "/docs/security",
+      "destination": "/reference/security"
+    },
+    {
+      "source": "/docs/limits",
+      "destination": "/reference/quotas-and-limits"
+    },
+    {
+      "source": "/reference/upsert",
+      "destination": "/reference/api/data-plane/upsert"
+    },
+    {
+      "source": "/reference/query",
+      "destination": "/reference/api/data-plane/query"
+    },
+    {
+      "source": "/reference/fetch",
+      "destination": "/reference/api/data-plane/fetch"
+    },
+    {
+      "source": "/reference/update",
+      "destination": "/reference/api/data-plane/update"
+    },
+    {
+      "source": "/reference/delete",
+      "destination": "/reference/api/data-plane/delete"
+    },
+    {
+      "source": "/reference/alt_delete",
+      "destination": "/reference/api/data-plane/delete"
+    },
+    {
+      "source": "/reference/list",
+      "destination": "/reference/api/data-plane/list"
+    },
+    {
+      "source": "/reference/describe_index_stats",
+      "destination": "/reference/api/data-plane/describeindexstats"
+    },
+    {
+      "source": "/reference/alt_describe_index_stats",
+      "destination": "/reference/api/data-plane/describeindexstats"
+    },
+    {
+      "source": "/reference/list_indexes",
+      "destination": "/reference/api/control-plane/list_indexes"
+    },
+    {
+      "source": "/reference/create_index",
+      "destination": "/reference/api/control-plane/create_index"
+    },
+    {
+      "source": "/reference/describe_index",
+      "destination": "/reference/api/control-plane/describe_index"
+    },
+    {
+      "source": "/reference/delete_index",
+      "destination": "/reference/api/control-plane/delete_index"
+    },
+    {
+      "source": "/reference/configure_index",
+      "destination": "/reference/api/control-plane/configure_index"
+    },
+    {
+      "source": "/reference/list_collections",
+      "destination": "/reference/api/control-plane/list_collections"
+    },
+    {
+      "source": "/reference/create_collection",
+      "destination": "/reference/api/control-plane/create_collection"
+    },
+    {
+      "source": "/reference/describe_collection",
+      "destination": "/reference/api/control-plane/describe_collection"
+    },
+    {
+      "source": "/reference/delete_collection",
+      "destination": "/reference/api/control-plane/delete_collection"
+    },
+    {
+      "source": "/page/examples",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/page/libraries",
+      "destination": "/tools/pinecone-utilities"
+    },
+    {
+      "source": "/v1/*",
+      "destination": "/legacy/overview"
+    },
+    {
+      "source": "/docs/manage-indexes",
+      "destination": "/guides/indexes/understanding-indexes"
+    },
+    {
+      "source": "/docs/manage-indexes#list-all-indexes-in-a-project",
+      "destination": "/guides/indexes/view-index-information#list-all-indexes-in-a-project"
+    },
+    {
+      "source": "/docs/manage-indexes#get-information-about-an-index",
+      "destination": "/guides/indexes/view-index-information#get-information-about-an-index"
+    },
+    {
+      "source": "/docs/manage-indexes#create-a-serverless-index",
+      "destination": "/guides/indexes/create-an-index#create-a-serverless-index"
+    },
+    {
+      "source": "/docs/manage-indexes#create-a-pod-based-index",
+      "destination": "/guides/indexes/create-an-index#create-a-pod-based-index"
+    },
+    {
+      "source": "/docs/manage-indexes#create-a-starter-index",
+      "destination": "/guides/indexes/create-an-index#create-a-starter-index"
+    },
+    {
+      "source": "/docs/manage-indexes#create-an-index-from-a-collection",
+      "destination": "/guides/indexes/create-an-index#create-an-index-from-a-collection"
+    },
+    {
+      "source": "/docs/manage-indexes#configure-pod-based-indexes",
+      "destination": "/guides/indexes/configure-pod-based-indexes"
+    },
+    {
+      "source": "/docs/manage-indexes#change-pod-sizes",
+      "destination": "/guides/indexes/configure-pod-based-indexes"
+    },
+    {
+      "source": "/docs/manage-indexes#check-the-status-of-a-pod-size-change",
+      "destination": "/guides/indexes/configure-pod-based-indexes"
+    },
+    {
+      "source": "/docs/manage-indexes#add-replicas",
+      "destination": "/guides/indexes/configure-pod-based-indexes"
+    },
+    {
+      "source": "/docs/manage-indexes#selective-metadata-indexing",
+      "destination": "/guides/indexes/configure-pod-based-indexes#selective-metadata-indexing"
+    },
+    {
+      "source": "/docs/manage-indexes#delete-an-index",
+      "destination": "/guides/indexes/delete-an-index"
+    },
+    {
+      "source": "/docs/back-up-indexes",
+      "destination": "/guides/indexes/back-up-an-index"
+    },
+    {
+      "source": "/docs/convert-to-severless",
+      "destination": "/guides/indexes/convert-a-starter-index-to-serverless"
+    },
+    {
+      "source": "/docs/pinecone-public-datasets",
+      "destination": "/guides/data/use-public-pinecone-datasets"
+    },
+    {
+      "source": "/docs/metadata-filtered-search",
+      "destination": "/guides/data/filter-with-metadata"
+    },
+    {
+      "source": "/docs/insert-data",
+      "destination": "/guides/data/upsert-data"
+    },
+    {
+      "source": "/docs/global-api-quickstart",
+      "destination": "/guides/get-started/quickstart"
+    },
+    {
+      "source": "/docs/starter-environment",
+      "destination": "/guides/indexes/understanding-indexes#starter-indexes"
+    },
+    {
+      "source": "/reference/describe_index_stats_post",
+      "destination": "/reference/api/data-plane/describeindexstats"
+    },
+    {
+      "source": "/docs/manage-data",
+      "destination": "/guides/data/upsert-data"
+    },
+    {
+      "source": "/docs/manage-projects",
+      "destination": "/guides/projects/understanding-projects"
+    },
+    {
+      "source": "/installation",
+      "destination": "/reference/python-clients"
+    },
+    {
+      "source": "/page/example-applications",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/libraries",
+      "destination": "/tools/pinecone-utilities"
+    },
+    {
+      "source": "/integrations",
+      "destination": "/integrations/overview"
+    },
+    {
+      "source": "/docs/manage-datasets",
+      "destination": "/guides/data/use-public-pinecone-datasets"
+    },
+    {
+      "source": "/docs/basic-hybrid-search",
+      "destination": "/guides/data/understanding-hybrid-search"
+    },
+    {
+      "source": "basic-hybrid-search",
+      "destination": "/guides/data/understanding-hybrid-search"
+    },
+    {
+      "source": "/node-client",
+      "destination": "/reference/node-client"
+    },
+    {
+      "source": "/docs/api-reference",
+      "destination": "/reference/api/introduction"
+    },
+    {
+      "source": "/docs/sdk",
+      "destination": "/reference/python-clients"
+    },
+    {
+      "source": "/docs/image-similarity-search",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/semantic-search-text-typescript",
+      "destination": "/examples/sample-apps"
+    },
+    {
+      "source": "/docs/gen-qa-openai",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/personalized-content-recommendations-typescript",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/langchain-retrieval-agent",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/langchain-retrieval-agent-typescript",
+      "destination": "/examples/sample-apps"
+    },
+    {
+      "source": "/docs/langchain-retrieval-augmentation",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/gpt-4-langchain-docs",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/extractive-question-answering",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/abstractive-question-answering",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/table-qa",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/ecommerce-search",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/ner-search",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/video-search",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/satellite-image-search",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/it-threat-detection",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/document-deduplication",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/movie-recommender",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/audio-search",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/time-series",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/product-recommendation-engine",
+      "destination": "/examples/notebooks"
+    },
+    {
+      "source": "/docs/upserting-sparse-dense-records",
+      "destination": "/guides/data/upsert-sparse-dense-vectors"
+    },
+    {
+      "source": "/reference/manage-indexes/hybrid-search",
+      "destination": "/guides/data/understanding-hybrid-search"
+    },
+    {
+      "source": "/docs/weighting-sparse-and-dense-vectors",
+      "destination": "/guides/data/query-sparse-dense-vectors"
+    },
+    {
+      "source": "/troubleshooting/serverless-controller-error",
+      "destination": "/troubleshooting/serverless-index-connection-errors"
+    },
+    {
+      "source": "/new-api",
+      "destination": "/guides/operations/migrate-to-the-new-api"
+    },
+    {
+      "source": "/guides/operations/understanding-multitenancy",
+      "destination": "/guides/indexes/implement-multitenancy"
     }
   ]
 }
