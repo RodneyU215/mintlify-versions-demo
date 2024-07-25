@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/schema.json",
   "name": "Demo",
-  "versions": ["English", "Español"],
+  "versions": ["e1", "e2"],
   "colors": {
     "primary": "#2759CD",
     "light": "#8DB0FB",
@@ -11,18 +11,84 @@
       "dark": "#0c101f"
     }
   },
-
+  "anchors": [
+    {
+      "name": "Anchor E1",
+      "icon": "code",
+      "url": "e1",
+      "version": "e1"
+    },
+    {
+      "name": "Anchor E2",
+      "icon": "pencil",
+      "url": "e2",
+      "version": "e2"
+    },
+    {
+      "name": "Anchor Without a Version",
+      "icon": "envelope",
+      "url": "https://www.example.org"
+    }
+  ],
+  "tabs": [
+    {
+      "name": "E1 Test - Google",
+      "url": "https://www.google.com/",
+      "version": "e1"
+    },
+    {
+      "name": "E2 Test - Bing",
+      "url": "https://www.bing.com/",
+      "version": "e2"
+    },
+    {
+      "name": "Yahoo",
+      "url": "https://www.yahoo.com/"
+    },
+    {
+      "name": "Common",
+      "url": "common"
+    }
+  ],
   "favicon": "/favicon.png",
   "navigation": [
     {
-      "group": "Getting Started",
-      "version": "English",
-      "pages": ["english/introduction"]
+      "group": "E1 Group",
+      "version": "e1",
+      "pages": ["e1/introduction"]
     },
     {
-      "group": "Empezando",
-      "version": "Español",
-      "pages": ["espanol/introduccion"]
+      "group": "E2 Group",
+      "version": "e2",
+      "pages": ["e2/introduction"]
+    },
+    {
+      "group": "Common",
+      "pages": ["common/hello"]
+    },
+    {
+      "group": "Nested Group",
+      "pages": [
+        {
+          "group": "E1",
+          "version": "e1",
+          "pages": ["e1/nested-group"]
+        },
+        {
+          "group": "E2",
+          "version": "e2",
+          "pages": ["e2/nested-group"]
+        },
+        {
+          "group": "Nested Group Always Shows",
+          "pages": ["other-page"]
+        },
+        "basic-page"
+      ]
+    },
+    {
+      "group": "Page Level",
+      "pages": ["e1/page-level", "e2/page-level"]
     }
   ]
 }
